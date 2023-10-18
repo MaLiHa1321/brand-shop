@@ -8,7 +8,7 @@ const AddToCart = () => {
     const [product, setProduct] = useState(loaderData);
 
 const handleDelete = id =>{
-   fetch(`http://localhost:5000/cart/${id}`,{
+   fetch(`https://brand-shop-server-o4gdoreou-maliha-khans-projects.vercel.app/cart/${id}`,{
     method: "DELETE"
    })
    .then(res => res.json())

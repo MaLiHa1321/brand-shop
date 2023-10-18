@@ -19,7 +19,7 @@ const Register = () => {
     .then(res => {
       handleupdateProfile(name,photo)
       .then(() =>{
-        toast.success('user created successful')
+        toast.success('user created successfully')
         navigate('/')
       })
     })

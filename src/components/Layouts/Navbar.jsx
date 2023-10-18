@@ -40,7 +40,7 @@ const Navbar = () => {
     </ul>
   </div>
   {
-    user?.email ?  <div className="navbar-end">
+    user?.email ?  <div className="navbar-end flex flex-col lg:flex-row">
       <img className='w-[50px] h-[50px] rounded-full' src={user?.photoURL} alt="" />
       <p>{user.displayName}</p>
     <a onClick={logout} className="btn">Logout</a>

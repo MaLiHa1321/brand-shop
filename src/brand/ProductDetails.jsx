@@ -14,7 +14,7 @@ const ProductDetails = () => {
         }
         console.log(cartItem)
 
-        fetch('http://localhost:5000/cart',{
+        fetch('https://brand-shop-server-o4gdoreou-maliha-khans-projects.vercel.app/cart',{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -37,15 +37,15 @@ const ProductDetails = () => {
         position="top-right"
         reverseOrder={false}
       />
-           <img src={photo} alt="" />
-           <h2 className='text-2xl text-bold'>{name}</h2>
-           <h2 className='text-2xl text-bold'>{brand}</h2>
-           <p className='text-2xl text-bold'>{price}</p>
-           <p className='text-xl'>{des}</p>
-           <p className='text-2xl text-bold'>Rating: {rating}</p>
+           <img className='text-center w-[300px] mx-auto h-[300px]' src={photo} alt="" />
+           <h2 className='text-2xl text-bold text-center'>Name: {name}</h2>
+           <h2 className='text-2xl text-bold  text-center'>Brand:{brand}</h2>
+           <p className='text-2xl text-bold  text-center'>Price:{price} TK</p>
+           <p className='text-xl text-bold  text-center'>Description:{des}</p>
+           <p className='text-2xl text-bold  text-center'>Rating: {rating}</p>
           <div onClick={handlecart}>
 
-           <button className='btn btn-primary'>Add to cart</button>
+           <button className='btn btn-primary m-5'>Add to cart</button>
           </div>
           
             

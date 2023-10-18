@@ -13,11 +13,11 @@ const Laptop = ({phoneData,targetBrand}) => {
             <img src={laptop.photo} alt={laptop.name} />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">{laptop.name}</h2>
-            <p>{laptop.des}</p>
-            <p>Brand: {laptop.brand}</p>
-            <p>Price: {laptop.price}</p>
-            <p>Rating: {laptop.rating}</p>
+            <h2 className="card-title">Name: {laptop.name}</h2>
+            <p className='text-base'>Description: {laptop.des}</p>
+            <p className='text-base'>Brand: {laptop.brand}</p>
+            <p className='text-base'>Price: {laptop.price}</p>
+            <p className='text-base'>Rating: {laptop.rating}</p>
             <div className="card-actions justify-end">
             <Link to={`/updateDetails/${laptop._id}`}>
          <button className="btn btn-primary">Update</button>

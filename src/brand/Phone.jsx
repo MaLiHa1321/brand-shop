@@ -14,11 +14,11 @@ const Phone = ({phoneData,targetBrand}) => {
             <img src={phone.photo} alt={phone.name} />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">{phone.name}</h2>
-            <p>{phone.des}</p>
-            <p>Brand: {phone.brand}</p>
-            <p>Price: {phone.price}</p>
-            <p>Rating: {phone.rating}</p>
+            <h2 className="card-title">Name: {phone.name}</h2>
+            <p className='text-base'>Description: {phone.des}</p>
+            <p className='text-base'>Brand: {phone.brand}</p>
+            <p className='text-base'>Price: {phone.price} TK</p>
+            <p className='text-base'>Rating: {phone.rating}</p>
             <div className="card-actions justify-end">
            
             

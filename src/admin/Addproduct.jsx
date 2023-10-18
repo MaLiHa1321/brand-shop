@@ -21,7 +21,7 @@ const Addproduct = () => {
         const product ={name,brand,photo,type,des,price,rating}
         console.log(product)
 
-        fetch('http://localhost:5000/phones', {
+        fetch('https://brand-shop-server-o4gdoreou-maliha-khans-projects.vercel.app/phones', {
           method: 'POST',
         
           headers: {

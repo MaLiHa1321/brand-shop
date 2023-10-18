@@ -10,7 +10,7 @@ const Addbrand = () => {
         const addBrand = {name,photo}
         console.log(addBrand)
 
-        fetch('http://localhost:5000/brands',{
+        fetch('https://brand-shop-server-o4gdoreou-maliha-khans-projects.vercel.app/brands',{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

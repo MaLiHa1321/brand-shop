@@ -12,11 +12,11 @@ const Headphone = ({phoneData,targetBrand}) => {
        <img src={head.photo} alt={head.name} />
      </figure>
      <div className="card-body">
-       <h2 className="card-title">{head.name}</h2>
-       <p>{head.des}</p>
-       <p>Brand: {head.brand}</p>
-       <p>Price: {head.price}</p>
-       <p>Rating: {head.rating}</p>
+       <h2 className="card-title">Name: {head.name}</h2>
+       <p className='text-base'>Product description: {head.des}</p>
+       <p className='text base'>Brand: {head.brand}</p>
+       <p className='text-base'>Price: {head.price} TK</p>
+       <p className='text-base'>Rating: {head.rating}</p>
        <div className="card-actions justify-end">
        <Link to={`/updateDetails/${head._id}`}>
          <button className="btn btn-primary">Update</button>

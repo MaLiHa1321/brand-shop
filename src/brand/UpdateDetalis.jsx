@@ -22,7 +22,7 @@ const UpdateDetalis = () => {
         const updatedProduct ={name,brand,photo,type,des,price,rating}
         console.log(updatedProduct)
 
-        fetch(`http://localhost:5000/phones/${_id}`, {
+        fetch(`https://brand-shop-server-o4gdoreou-maliha-khans-projects.vercel.app/phones/${_id}`, {
           method: 'PUT',
           headers: {
               'content-type': 'application/json',

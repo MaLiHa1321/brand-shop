@@ -20,10 +20,12 @@ import ProductDetails from './brand/ProductDetails.jsx';
 import AddToCart from './admin/AddToCart.jsx';
 import AuthProvider from './provider/AuthProvider.jsx';
 import PrivateRoutes from './components/Layouts/privateroutes/PrivateRoutes.jsx';
+import ErrorPage from './Errorpage/ErrorPage.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Mainlayout></Mainlayout>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',
@@ -57,14 +59,14 @@ const router = createBrowserRouter([
       {
         path: '/phones',
         element: <Phone></Phone>,
-        loader: () => fetch('http://localhost:5000/phones')
+        loader: () => fetch('https://brand-shop-server-o4gdoreou-maliha-khans-projects.vercel.app/phones')
       },
       {
         path: '/updateDetails/:id',
         element: <PrivateRoutes>
           <UpdateDetalis></UpdateDetalis>
         </PrivateRoutes>,
-        loader: ({params}) => fetch(`http://localhost:5000/phones/${params.id}`)
+        loader: ({params}) => fetch(`https://brand-shop-server-o4gdoreou-maliha-khans-projects.vercel.app/phones/${params.id}`)
       },
       {
         path: '/proDetails/:id',
@@ -72,7 +74,7 @@ const router = createBrowserRouter([
 
           <ProductDetails></ProductDetails>
         </PrivateRoutes>,
-        loader: ({params}) => fetch(`http://localhost:5000/phones/${params.id}`)
+        loader: ({params}) => fetch(`https://brand-shop-server-o4gdoreou-maliha-khans-projects.vercel.app/phones/${params.id}`)
 
       },
       {
@@ -80,7 +82,7 @@ const router = createBrowserRouter([
         element: <PrivateRoutes>
           <AddToCart></AddToCart>
         </PrivateRoutes>,
-        loader: () => fetch('http://localhost:5000/cart')
+        loader: () => fetch('https://brand-shop-server-o4gdoreou-maliha-khans-projects.vercel.app/cart')
 
       },
     

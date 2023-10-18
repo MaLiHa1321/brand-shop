@@ -15,7 +15,7 @@ const BrandDetails = () => {
     const [phoneData, setPhoneData] = useState(null);
     useEffect(() => {
       // Fetch phone data when the component mounts
-      fetch('http://localhost:5000/phones')
+      fetch('https://brand-shop-server-o4gdoreou-maliha-khans-projects.vercel.app/phones')
           .then((response) => response.json())
           .then((data) => {
               setPhoneData(data);
@@ -63,7 +63,7 @@ const BrandDetails = () => {
 
   {/* phone type */}
   <div> 
-    <h2 className='text-2xl font-bold'>Phone</h2>
+    <h2 className='text-2xl font-bold flex justify-start'>Phone</h2>
                 {phoneData ? 
                   <Phone phoneData={phoneData} targetBrand={targetBrand} />
                  : (
@@ -72,7 +72,7 @@ const BrandDetails = () => {
             </div>
   {/* laptop */}
   <div>
-  <h2 className='text-2xl font-bold'>Laptop</h2>
+  <h2 className='text-2xl font-bold flex justify-start'>Laptop</h2>
   {phoneData ? 
                   <Laptop phoneData={phoneData} targetBrand={targetBrand} />
                  : (
@@ -83,7 +83,7 @@ const BrandDetails = () => {
   {/* tablet */}
 
 <div>
-<h2 className='text-2xl font-bold'>Tablets</h2>
+<h2 className='text-2xl font-bold flex justify-start'>Tablets</h2>
                 {phoneData ? 
                   <Table phoneData={phoneData} targetBrand={targetBrand} />
                  : (
@@ -93,7 +93,7 @@ const BrandDetails = () => {
 </div>
 {/* headphone */}
 <div>
-<h2 className='text-2xl font-bold'>Tablets</h2>
+<h2 className='text-2xl font-bold flex justify-start'>Tablets</h2>
                 {phoneData ? 
                   <Headphone phoneData={phoneData} targetBrand={targetBrand} />
                  : (
