@@ -2,7 +2,7 @@
     "brand":[
         {
             "id": 1,
-            "brand_name": "Apple",
+            "brand_name": "apple",
             "brand_image": "https://i.ibb.co/cxLpLH7/apple.jpg",
             "slider_image1": "https://i.ibb.co/Rp0rXNW/laptop.jpg",
             "slider_image2": "https://i.ibb.co/LrX7sG8/headphone.jpg",
@@ -12,7 +12,7 @@
         },
         {
             "id": 2,
-            "brand_name": "Samsung",
+            "brand_name": "samsung",
             "brand_image": "https://i.ibb.co/SBpvCT9/samsung.png",
             "slider_image1": "https://i.ibb.co/Rp0rXNW/laptop.jpg",
             "slider_image2": "https://i.ibb.co/LrX7sG8/headphone.jpg",
@@ -21,7 +21,7 @@
         },
         {
             "id": 3,
-            "brand_name": "Sony",
+            "brand_name": "sony",
             "brand_image": "https://i.ibb.co/gmNctL1/sony.png",
             "slider_image1": "https://i.ibb.co/Rp0rXNW/laptop.jpg",
             "slider_image2": "https://i.ibb.co/LrX7sG8/headphone.jpg",
@@ -30,7 +30,7 @@
         },
         {
             "id": 4,
-            "brand_name": "Intel",
+            "brand_name": "intel",
             "brand_image": "https://i.ibb.co/qg4rMZH/intel.png",
             "slider_image1": "https://i.ibb.co/Rp0rXNW/laptop.jpg",
             "slider_image2": "https://i.ibb.co/LrX7sG8/headphone.jpg",
@@ -39,7 +39,7 @@
         },
         {
             "id": 5,
-            "brand_name": "Google",
+            "brand_name": "google",
             "brand_image": "https://i.ibb.co/h9dsn80/google.png",
             "slider_image1": "https://i.ibb.co/Rp0rXNW/laptop.jpg",
             "slider_image2": "https://i.ibb.co/LrX7sG8/headphone.jpg",
@@ -48,7 +48,7 @@
         },
         {
             "id": 6,
-            "brand_name": "Walton",
+            "brand_name": "walton",
             "brand_image": "https://i.ibb.co/8BV2NL6/walton.png",
             "slider_image1": "https://i.ibb.co/Rp0rXNW/laptop.jpg",
             "slider_image2": "https://i.ibb.co/LrX7sG8/headphone.jpg",

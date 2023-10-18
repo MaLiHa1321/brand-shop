@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
 
-const Addproduct = () => {
-
+const UpdateDetalis = () => {
+    const product = useLoaderData();
     const [type, setType] = useState(''); // State for the selected type
-    const [brand, setBrand] = useState('');
-    const types = ['Laptop', 'tablet', 'Mobile', 'Headphone']; // Array of type options
+    const types = ['Laptop', 'tablet', 'Mobile', 'Headphone'];
+    const {name,brand,photo,des,price,rating,_id} = product;
 
- 
+
     const handleaAdd = e => {
         e.preventDefault();
         const form = e.target;
@@ -17,23 +18,21 @@ const Addproduct = () => {
         const des = form.des.value;
         const price = form.price.value;
         const rating = form.rating.value;
-        const product ={name,brand,photo,type,des,price,rating}
-        console.log(product)
+        const updatedProduct ={name,brand,photo,type,des,price,rating}
+        console.log(updatedProduct)
 
-        fetch('http://localhost:5000/phones', {
-          method: 'POST',
-        
+        fetch(`http://localhost:5000/phones/${_id}`, {
+          method: 'PUT',
           headers: {
               'content-type': 'application/json',
           },
-          body: JSON.stringify(product),
+          body: JSON.stringify(updatedProduct),
       })
         .then(res => res.json())
         .then(data =>{
           console.log(data)
-          if(data.insertedId){
-            alert('product added successful')
-          }
+          if(data.modifiedCount)
+          alert("modified successful")
         })
     }
 
@@ -44,26 +43,26 @@ const Addproduct = () => {
     };
     return (
         <div>
-            <h2>add product</h2>
-             <div>
+            <h2>update product: {name}</h2>
+            <div>
                 <form onSubmit={handleaAdd} >
         <div className="form-control">
           <label className="label">
             <span className="label-text">name</span>
           </label>
-          <input type="text" placeholder="name" name="name" className="input input-bordered" required />
+          <input type="text" placeholder="name" name="name" defaultValue={name} className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Brand name</span>
           </label>
-          <input type="text" placeholder="brand name" name="brand" className="input input-bordered" required />
+          <input type="text" placeholder="brand name" name="brand" defaultValue={brand} className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Image url</span>
           </label>
-          <input type="text" placeholder="image url" name="photo" className="input input-bordered" required />
+          <input type="text" placeholder="image url" name="photo" defaultValue={photo} className="input input-bordered" required />
         </div>
         <div className="form-control">
             <label className="label">
@@ -74,6 +73,7 @@ const Addproduct = () => {
               onChange={handleTypeChange}
               className="input input-bordered"
               name="type"
+              defaultValue={type}
               required
             >
               <option value="" disabled>
@@ -86,33 +86,27 @@ const Addproduct = () => {
               ))}
             </select>
           </div>
-        {/* <div className="form-control">
-          <label className="label">
-            <span className="label-text">Types</span>
-          </label>
-          <input type="text" placeholder="types" name="photo" className="input input-bordered" required />
-
-        </div> */}
+      
         <div className="form-control">
           <label className="label">
             <span className="label-text">Price</span>
           </label>
-          <input type="text" placeholder="price" name="price" className="input input-bordered" required />
+          <input type="text" placeholder="price" name="price" defaultValue={price} className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Description</span>
           </label>
-          <textarea placeholder="description" type="text" name='des' className="textarea textarea-bordered textarea-lg w-full max-w-xs" ></textarea>
+          <textarea placeholder="description" type="text" name='des' defaultValue={des} className="textarea textarea-bordered textarea-lg w-full max-w-xs" ></textarea>
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Rating</span>
           </label>
-          <input type="text" placeholder="rating" name="rating" className="input input-bordered" required />
+          <input type="text" placeholder="rating" name="rating" defaultValue={rating} className="input input-bordered" required />
         </div>
         <div className="form-control m-6">
-          <button className="btn btn-primary">add product</button>
+          <button className="btn btn-primary">submit</button>
         </div>
                 </form>
              </div>
@@ -121,4 +115,4 @@ const Addproduct = () => {
     );
 };
 
-export default Addproduct;
+export default UpdateDetalis;

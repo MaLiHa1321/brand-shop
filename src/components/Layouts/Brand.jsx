@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom';
 
 
 const Brand = ({brand}) => {
+
+    const {brand_name,brand_image,id} = brand
    
-    const {brand_image,brand_name,id} = brand
-    console.log(brand)
+    // const {name,photo,_id} = brand
+
     return (
         <div>
           <Link to={`/brand/${id}`}>
