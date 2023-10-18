@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import toast, { Toaster } from 'react-hot-toast';
 
 const AddToCart = () => {
     const loaderData = useLoaderData()
@@ -14,7 +15,7 @@ const handleDelete = id =>{
    .then(data => {
     console.log(data)
     if(data.deletedCount > 0){
-        alert("deleted successful")
+        toast.success("deleted successful")
         const remaing = product.filter(products => products._id !== id)
         setProduct(remaing)
     }
@@ -23,6 +24,10 @@ const handleDelete = id =>{
    
     return (
         <div>
+             <Toaster
+        position="top-right"
+        reverseOrder={false}
+      />
             <h1>{product.length}</h1>
             <div className="container overflow-x-hidden ">
   <table className="table">

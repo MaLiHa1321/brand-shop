@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import toast, { Toaster } from 'react-hot-toast';
 
 const ProductDetails = () => {
     const product = useLoaderData();
@@ -24,7 +25,7 @@ const ProductDetails = () => {
         .then(data => {
             console.log(data)
             if(data.insertedId){
-                alert('added successful')
+                toast.success('product added successful')
             }
         })
 
@@ -32,6 +33,10 @@ const ProductDetails = () => {
     
     return (
         <div>
+              <Toaster
+        position="top-right"
+        reverseOrder={false}
+      />
            <img src={photo} alt="" />
            <h2 className='text-2xl text-bold'>{name}</h2>
            <h2 className='text-2xl text-bold'>{brand}</h2>

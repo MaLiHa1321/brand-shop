@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import toast, { Toaster } from 'react-hot-toast';
 
 const UpdateDetalis = () => {
     const product = useLoaderData();
@@ -32,7 +33,7 @@ const UpdateDetalis = () => {
         .then(data =>{
           console.log(data)
           if(data.modifiedCount)
-          alert("modified successful")
+          toast.success("updated successful")
         })
     }
 
@@ -43,6 +44,10 @@ const UpdateDetalis = () => {
     };
     return (
         <div>
+              <Toaster
+        position="top-right"
+        reverseOrder={false}
+      />
             <h2>update product: {name}</h2>
             <div>
                 <form onSubmit={handleaAdd} >

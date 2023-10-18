@@ -18,6 +18,8 @@ import Phone from './brand/Phone.jsx';
 import UpdateDetalis from './brand/UpdateDetalis.jsx';
 import ProductDetails from './brand/ProductDetails.jsx';
 import AddToCart from './admin/AddToCart.jsx';
+import AuthProvider from './provider/AuthProvider.jsx';
+import PrivateRoutes from './components/Layouts/privateroutes/PrivateRoutes.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -36,7 +38,9 @@ const router = createBrowserRouter([
       },
       {
         path: '/addproduct',
-        element: <Addproduct></Addproduct>
+        element: <PrivateRoutes>
+          <Addproduct></Addproduct>
+        </PrivateRoutes>
       },
       {
         path: '/login',
@@ -57,27 +61,39 @@ const router = createBrowserRouter([
       },
       {
         path: '/updateDetails/:id',
-        element: <UpdateDetalis></UpdateDetalis>,
+        element: <PrivateRoutes>
+          <UpdateDetalis></UpdateDetalis>
+        </PrivateRoutes>,
         loader: ({params}) => fetch(`http://localhost:5000/phones/${params.id}`)
       },
       {
         path: '/proDetails/:id',
-        element: <ProductDetails></ProductDetails>,
+        element: <PrivateRoutes>
+
+          <ProductDetails></ProductDetails>
+        </PrivateRoutes>,
         loader: ({params}) => fetch(`http://localhost:5000/phones/${params.id}`)
 
       },
       {
         path: '/addtocart',
-        element: <AddToCart></AddToCart>,
+        element: <PrivateRoutes>
+          <AddToCart></AddToCart>
+        </PrivateRoutes>,
         loader: () => fetch('http://localhost:5000/cart')
 
-      }
+      },
+    
     ]
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <AuthProvider>
+
     <RouterProvider router={router} />
+    </AuthProvider>
+   
   </React.StrictMode>,
 )

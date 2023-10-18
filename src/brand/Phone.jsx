@@ -20,9 +20,8 @@ const Phone = ({phoneData,targetBrand}) => {
             <p>Price: {phone.price}</p>
             <p>Rating: {phone.rating}</p>
             <div className="card-actions justify-end">
-                {/* <Link to={`/proDetails/${phone._id}`} > */}
-            <button className="btn btn-primary">Details</button>
-                {/* </Link> */}
+           
+            
                 <Link to={`/updateDetails/${phone._id}`}>
          <button className="btn btn-primary">Update</button>
                 </Link>

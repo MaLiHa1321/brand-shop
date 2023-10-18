@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Addproduct = () => {
 
@@ -32,7 +33,7 @@ const Addproduct = () => {
         .then(data =>{
           console.log(data)
           if(data.insertedId){
-            alert('product added successful')
+            toast.success('product added successful')
           }
         })
     }
@@ -44,6 +45,10 @@ const Addproduct = () => {
     };
     return (
         <div>
+               <Toaster
+        position="top-right"
+        reverseOrder={false}
+      />
             <h2>add product</h2>
              <div>
                 <form onSubmit={handleaAdd} >
