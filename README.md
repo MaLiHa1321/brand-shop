@@ -2,7 +2,10 @@
 
 Basically my project is based on the technology and electronics ecommerce site. 
 
-The feature of this website are:
+The feature of this website that helps to user:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- User can see technology and features which we are provide.
+- User can login and register to this website.
+- User can see the different categories of electronics product.
+- User can buy their favourite product by adding add to cart pages.
+- user can see the product details.
