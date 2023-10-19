@@ -76,7 +76,7 @@ const BrandDetails = () => {
   {phoneData ? 
                   <Laptop phoneData={phoneData} targetBrand={targetBrand} />
                  : (
-                    <p>Loading phone data...</p>
+                    <p>Loading laptop data...</p>
                 )}
   
   </div>
@@ -87,7 +87,7 @@ const BrandDetails = () => {
                 {phoneData ? 
                   <Table phoneData={phoneData} targetBrand={targetBrand} />
                  : (
-                    <p>Loading phone data...</p>
+                    <p>Loading tablet data...</p>
                 )}
   
 </div>
@@ -97,7 +97,7 @@ const BrandDetails = () => {
                 {phoneData ? 
                   <Headphone phoneData={phoneData} targetBrand={targetBrand} />
                  : (
-                    <p>Loading phone data...</p>
+                    <p>Loading Headsphone data...</p>
                 )}
 
    

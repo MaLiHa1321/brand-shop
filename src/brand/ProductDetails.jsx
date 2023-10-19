@@ -55,16 +55,7 @@ const ProductDetails = () => {
   </div>
 </div>
 
-           {/* <img className='text-center w-[300px] mx-auto h-[300px]' src={photo} alt="" />
-           <h2 className='text-2xl text-bold text-center'>Name: {name}</h2>
-           <h2 className='text-2xl text-bold  text-center'>Brand:{brand}</h2>
-           <p className='text-2xl text-bold  text-center'>Price:{price} TK</p>
-           <p className='text-xl text-bold  text-center'>Description:{des}</p>
-           <p className='text-2xl text-bold  text-center'>Rating: {rating}</p>
-          <div onClick={handlecart}>
-
-           <button className='btn btn-primary m-5'>Add to cart</button>
-          </div> */}
+         
           
             
         </div>
