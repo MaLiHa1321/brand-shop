@@ -13,8 +13,8 @@ const Laptop = ({phoneData,targetBrand}) => {
             <img src={laptop.photo} alt={laptop.name} />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">Name: {laptop.name}</h2>
-            <p className='text-base'>Description: {laptop.des}</p>
+            <h2 className="card-title"> {laptop.name}</h2>
+            <p className='text-base'> {laptop.des}</p>
             <p className='text-base'>Brand: {laptop.brand}</p>
             <p className='text-base'>Price: {laptop.price}</p>
             <p className='text-base'>Rating: {laptop.rating}</p>

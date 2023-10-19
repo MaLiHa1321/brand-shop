@@ -1,17 +1,18 @@
 import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
+import './Navbar.css'
 
 const Navbar = () => {
      
   const {user, logout} = useContext(AuthContext)
     const navLinks = <>
 
-<NavLink className="mr-3 underline text-lg" to="/">Home</NavLink>
-<NavLink className="mr-3 underline text-lg" to="/addproduct">Add product</NavLink>
-<NavLink className="mr-3 underline text-lg" to="/addtocart">My cart</NavLink>
-<NavLink className="mr-3 underline text-lg" to="/login">Login</NavLink>
-<NavLink className="mr-3 underline text-lg" to="/register">Register</NavLink>
+<NavLink className="mr-3  text-lg" to="/">Home</NavLink>
+<NavLink className="mr-3  text-lg" to="/addproduct">Add product</NavLink>
+<NavLink className="mr-3  text-lg" to="/addtocart">My cart</NavLink>
+<NavLink className="mr-3 text-lg" to="/login">Login</NavLink>
+<NavLink className="mr-3  text-lg" to="/register">Register</NavLink>
 {/* <NavLink className="mr-3 underline text-lg" to="/addbrand">Brand</NavLink> */}
     </>
 

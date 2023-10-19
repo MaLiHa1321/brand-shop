@@ -11,11 +11,11 @@ const Phone = ({phoneData,targetBrand}) => {
              {filteredPhoneData?.map((phone, index) => (
         <div key={index} className="card w-78 bg-base-100 shadow-xl">
           <figure>
-            <img src={phone.photo} alt={phone.name} />
+            <img className='w-[200px] h-[200px]' src={phone.photo} alt={phone.name} />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">Name: {phone.name}</h2>
-            <p className='text-base'>Description: {phone.des}</p>
+            <h2 className="card-title text-center"> {phone.name}</h2>
+            <p className='text-base'>{phone.des}</p>
             <p className='text-base'>Brand: {phone.brand}</p>
             <p className='text-base'>Price: {phone.price} TK</p>
             <p className='text-base'>Rating: {phone.rating}</p>
