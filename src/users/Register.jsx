@@ -33,10 +33,11 @@ const Register = () => {
     }
    if(!/[A-Z]/.test(password)){
     toast.error("password should have atleast capital letter")
-      return
+      return;
     }
    if(!/[@$!%*?&]/.test(password)){
     toast.error("password should have atleast spcial character")
+    return;
    }
  }
     return (
@@ -74,7 +75,7 @@ const Register = () => {
         </div>
         <p>Already have an account? <span className='text-blue-400'><Link to="/login">Login</Link></span></p>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Login</button>
+          <button className="btn btn-primary">Register</button>
         </div>
         <div className='mt-5'>
           <SocialLogin></SocialLogin>
