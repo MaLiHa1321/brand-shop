@@ -16,9 +16,9 @@ const Table = ({phoneData,targetBrand}) => {
             <h2 className="card-title">{tab.name}</h2>
             <p>{tab.des}</p>
             <p>Brand: {tab.brand}</p>
-            <p>Price: {tab.price}</p>
+            <p>Price: {tab.price} TK</p>
             <p>Rating: {tab.rating}</p>
-            <div className="card-actions justify-end">
+            <div className="card-actions flex-row-reverse gap-12">
             <Link to={`/updateDetails/${tab._id}`}>
          <button className="btn btn-primary">Update</button>
                 </Link>

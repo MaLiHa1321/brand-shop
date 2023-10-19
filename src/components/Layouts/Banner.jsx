@@ -2,7 +2,7 @@ import React from 'react';
 
 const Banner = () => {
     return (
-        <div className='bg-gray-600 text-white p-5 min-h-screen flex justify-between items-center'>
+        <div className='bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white p-5 min-h-screen flex justify-between items-center'>
             <div className='flex flex-col md:flex-row-reverse justify-between items-center'>
                <img className='rounded w-[500px] h-[500px]' src="https://i.ibb.co/hLg6r0G/banner.jpg" alt="" />
                <div>

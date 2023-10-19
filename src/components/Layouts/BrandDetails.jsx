@@ -24,7 +24,7 @@ const BrandDetails = () => {
     // const {brand_name,slider_image1,slider_image2,slider_image3,slider_image4} =brand
     return (
         <div>
-            <h3 className='text-2xl font-bold'>{brand.brand_name}</h3>
+            <h3 className='text-3xl w-52 mx-auto p-2 rounded  font-bold m-5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white '>{brand.brand_name}</h3>
 
             {/* slider  */}
 
@@ -63,7 +63,7 @@ const BrandDetails = () => {
 
   {/* phone type */}
   <div> 
-    <h2 className='text-2xl font-bold flex justify-start'>Phone</h2>
+    <h2 className='text-2xl  w-52 mx-auto p-2 rounded  font-bold m-5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white '>Phone</h2>
                 {phoneData ? 
                   <Phone phoneData={phoneData} targetBrand={targetBrand} />
                  : (
@@ -72,7 +72,7 @@ const BrandDetails = () => {
             </div>
   {/* laptop */}
   <div>
-  <h2 className='text-2xl font-bold flex justify-start'>Laptop</h2>
+  <h2 className='text-2xl  w-52 mx-auto p-2 rounded  font-bold m-5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white'>Laptop</h2>
   {phoneData ? 
                   <Laptop phoneData={phoneData} targetBrand={targetBrand} />
                  : (
@@ -83,7 +83,7 @@ const BrandDetails = () => {
   {/* tablet */}
 
 <div>
-<h2 className='text-2xl font-bold flex justify-start'>Tablets</h2>
+<h2 className='text-2xl  w-52 mx-auto p-2 rounded  font-bold m-5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white'>Tablets</h2>
                 {phoneData ? 
                   <Table phoneData={phoneData} targetBrand={targetBrand} />
                  : (
@@ -93,7 +93,7 @@ const BrandDetails = () => {
 </div>
 {/* headphone */}
 <div>
-<h2 className='text-2xl font-bold flex justify-start'>Tablets</h2>
+<h2 className='text-2xl  w-52 mx-auto p-2 rounded  font-bold m-5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white'>Headphone</h2>
                 {phoneData ? 
                   <Headphone phoneData={phoneData} targetBrand={targetBrand} />
                  : (

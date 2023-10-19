@@ -37,7 +37,25 @@ const ProductDetails = () => {
         position="top-right"
         reverseOrder={false}
       />
-           <img className='text-center w-[300px] mx-auto h-[300px]' src={photo} alt="" />
+           <div className="hero min-h-screen bg-base-200">
+  <div className="hero-content flex-col lg:flex-row">
+    <img src={photo} className="max-w-sm rounded-lg shadow-2xl" />
+    <div>
+      <h1 className="text-5xl m-3 font-bold"> {name}</h1>
+      <h1 className="text-2xl m-3"> {brand} brand</h1>
+      <h1 className="text-2xl m-3"> Price: {price} TK</h1>
+      <p className='text-xl m-3 text-bold  text-center'>Description:{des}</p>
+      <h1 className="text-2xl m-3"> Rating: {rating}</h1>
+
+      <div onClick={handlecart}>
+
+<button className='btn btn-primary m-5'>Add to cart</button>
+</div>
+    </div>
+  </div>
+</div>
+
+           {/* <img className='text-center w-[300px] mx-auto h-[300px]' src={photo} alt="" />
            <h2 className='text-2xl text-bold text-center'>Name: {name}</h2>
            <h2 className='text-2xl text-bold  text-center'>Brand:{brand}</h2>
            <p className='text-2xl text-bold  text-center'>Price:{price} TK</p>
@@ -46,7 +64,7 @@ const ProductDetails = () => {
           <div onClick={handlecart}>
 
            <button className='btn btn-primary m-5'>Add to cart</button>
-          </div>
+          </div> */}
           
             
         </div>
