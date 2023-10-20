@@ -39,7 +39,7 @@ const ProductDetails = () => {
       />
            <div className="hero min-h-screen bg-base-200">
   <div className="hero-content flex-col lg:flex-row">
-    <img src={photo} className="max-w-sm rounded-lg shadow-2xl" />
+    <img src={photo} className="max-w-sm w-full h-full rounded-lg shadow-2xl" />
     <div>
       <h1 className="text-5xl m-3 font-bold"> {name}</h1>
       <h1 className="text-2xl m-3"> {brand} brand</h1>
